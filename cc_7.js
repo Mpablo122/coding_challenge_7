@@ -80,4 +80,19 @@ let filterHighvalueTransactions = (transactions, filterFunction) => {
 console.log(filterHighvalueTransactions(transactions,amount => amount > 1000));
 // expected output would be [1200,2200,3000]
 
+//task 7 - Budget Tracker.
+let createBudgetTracker = () => {
+    let balance = 0;
+    return (expense) => {
+        balance -= expense;
+        return `Current balance: $${balance}`;
+    };
+};
+let budget = createBudgetTracker()
+console.log(budget(300)); // balance should be -$300 for the output
+console.log(budget(200)); // balance should be -$500 for the output
+
+
+
+
 
