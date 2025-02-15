@@ -16,3 +16,23 @@ function calculateHourlyWage(salary, hoursPerWeek){
 
 calculateHourlyWage(52000, 40);// making use of the function to generate output
 calculateHourlyWage(75000, 35);// making use of the function to generate an output
+
+//Task 3 customer loyalty discount 
+
+let  calculateLoyaltyDiscount = (amount, years) => {
+    let discount;
+    if (years>= 5){
+        discount = 0.15;
+    } else if (years >= 3){
+        discount = 0.10;
+    } else {
+        discount = 0.05;
+    }
+    let discountedPrice = amount * (1 - discount);
+     return `Discounted price: $${discountedPrice.toFixed(2)}`
+};
+
+console.log(calculateLoyaltyDiscount(100,6)); // output should be $85
+console.log(calculateLoyaltyDiscount(200,2)); // output should be $190
+
+
