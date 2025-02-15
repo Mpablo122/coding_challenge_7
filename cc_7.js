@@ -61,6 +61,16 @@ let calculateShippingCost = (weight, location, expedited = false) => {
 console.log(calculateShippingCost(10,"USA",true)); // output should be $20
 console.log(calculateShippingCost(5,"Canada",false));// output should be $13
 
+//task 5 Business Loan Interest Calculation
+
+function calculateLoanInterest(principal, rate, years){
+    let interest = principal * rate * years
+    console.log(`Total interest: $${interest}`)
+}
+
+calculateLoanInterest(1000, 0.05, 3); // output should be $150
+calculateLoanInterest(5000,0.07,5); // output should be $1750
+
 
 
 
