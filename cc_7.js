@@ -35,4 +35,32 @@ let  calculateLoyaltyDiscount = (amount, years) => {
 console.log(calculateLoyaltyDiscount(100,6)); // output should be $85
 console.log(calculateLoyaltyDiscount(200,2)); // output should be $190
 
+// task 4 - Product Shipping Cost Calculation.
+
+let calculateShippingCost = (weight, location, expedited = false) => {
+    let baseCost;
+    let perPoundRate;
+
+    if (location === "USA") {
+        baseCost = 5;
+        perPoundRate = 0.5;
+    } else if ( location === "Canada"){
+        baseCost = 10;
+        perPoundRate = 0.7;
+    } else {
+        return "Invalid Location";
+    }
+    let totalCost = baseCost + (weight * perPoundRate);
+
+    if(expedited){
+        totalCost += 10;
+    }
+    return `Shipping Cost: $${totalCost}`;
+};
+
+console.log(calculateShippingCost(10,"USA",true)); // output should be $20
+console.log(calculateShippingCost(5,"Canada",false));// output should be $13
+
+
+
 
