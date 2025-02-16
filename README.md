@@ -1,1 +1,1 @@
-This is coding challeneg no 7
+This is coding challenge no 7
