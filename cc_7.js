@@ -37,7 +37,7 @@ console.log(calculateLoyaltyDiscount(200,2)); // output should be $190
 
 // task 4 - Product Shipping Cost Calculation.
 
-let calculateShippingCost = (weight, location, expedited = false) => {
+function calculateShippingCost (weight, location, expedited = false) {
     let baseCost;
     let perPoundRate;
 
